@@ -1,0 +1,25 @@
+@import './../../styles/global.scss';
+
+.item {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  min-height: 32px;
+  max-width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: $mainBlackColor;
+  @include MainFont;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  text-wrap: wrap;
+
+  & svg {
+    max-width: 20px;
+    width: 100%;
+    height: 20px;
+  }
+}

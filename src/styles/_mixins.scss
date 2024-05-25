@@ -1,0 +1,12 @@
+@import './../vendor/fonts/fonts.scss';
+
+@mixin MainFont {
+  font-family: 'TT Firs Neue', Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+@mixin SecondaryFont {
+  font-family: 'Abhaya Libre', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+}

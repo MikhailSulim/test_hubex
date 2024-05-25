@@ -1,18 +1,19 @@
 import { IEmployee, ICompany } from './types';
-import photo_01 from '/images/photo_01.png';
-import photo_02 from '/images/photo_02.png';
-import photo_03 from '/images/photo_03.png';
+import photo_01 from '../images/photo_01.png';
+import photo_02 from '../images/photo_02.png';
+import photo_03 from '../images/photo_03.png';
+import logo from '../images/Logo.png';
 
 export const employee: IEmployee = {
   id: 1,
-  name: 'Иванов Иван Петрович ',
+  name: 'Иванов\nИван Петрович ',
   position: 'Директор',
   photos: [photo_01, photo_02, photo_03],
   mobilePhoneNumber: '+7 (000) 123-45-67',
   phoneNumbers: ['+7 (812) 212-85-06', '+7 (000) 000-00-00'],
   email: 'director@mail.ru',
-  privateSite: 'Личный сайт',
-  address: 'Адрес',
+  privateSite: 'http://director.company.ru',
+  address: 'Адрес директора',
   birthDate: new Date('1955-12-02'),
   rank: 'Звание, учёная степень',
   companyId: 1,
@@ -37,15 +38,15 @@ export const employee: IEmployee = {
 
 export const company: ICompany = {
   id: 1,
-  name: '',
-  description: '',
-  logoImage: '',
+  name: 'Название компании',
+  description: 'Обеспечивать клиентов высококачественными материалами по доступным ценам, способствуя развитию любой отрасли в России.',
+  logoImage: logo,
   phoneNumber: '+7 (000) 000-00-00',
-  address: 'Адрес',
+  address: 'Адрес компании',
   email: 'company@mail.ru',
-  privateSite: '',
+  privateSite: 'http://company.ru',
   foundedDate: new Date('2000-01-01'),
-  fax: '',
+  fax: '+7 (000) 000-00-00',
   clients: [
     'Клиент 1',
     'Клиент 2',
@@ -59,20 +60,20 @@ export const company: ICompany = {
     'Клиент 10',
   ],
   socialLinks: [
-    { name: 'Telegram', url: 'http://' },
-    { name: 'Whatsapp', url: '' },
-    { name: 'Viber', url: '' },
-    { name: 'Instagram', url: '' },
-    { name: 'VK', url: '' },
-    { name: 'Facebook', url: '' },
-    { name: 'Youtube', url: '' },
-    { name: 'OK', url: '' },
-    { name: 'Dzen', url: '' },
-    { name: 'TikTok', url: '' },
-    { name: 'LinkedIn', url: '' },
-    { name: 'ICQ', url: '' },
-    { name: 'Twitter', url: '' },
-    { name: 'Skype', url: '' },
-    { name: 'TenChat', url: '' },
+    { name: 'telegram', url: 'http://' },
+    { name: 'whatsapp', url: '' },
+    { name: 'viber', url: '' },
+    { name: 'instagram', url: '' },
+    { name: 'vk', url: '' },
+    { name: 'facebook', url: '' },
+    { name: 'youtube', url: '' },
+    { name: 'ok', url: '' },
+    { name: 'dzen', url: '' },
+    { name: 'tikTok', url: '' },
+    { name: 'linkedin', url: '' },
+    { name: 'icq', url: '' },
+    { name: 'twitter', url: '' },
+    { name: 'skype', url: '' },
+    { name: 'tenchat', url: '' },
   ],
 };

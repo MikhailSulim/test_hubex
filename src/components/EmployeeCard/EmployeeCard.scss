@@ -1,0 +1,209 @@
+@import './../../styles/global.scss';
+
+.card {
+  margin-top: 80px;
+  position: relative;
+
+  &__container {
+    box-sizing: border-box;
+    max-width: 648px;
+    width: 100%;
+    height: 696px;
+
+    display: flex;
+    flex-direction: column;
+    //height: 100%;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+  }
+
+  &__navigation {
+    position: absolute;
+    top: -33px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 17px;
+
+    &-item {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: $mainWhiteColor;
+      @include MainFont;
+      font-size: 14px;
+      line-height: 16.8px;
+      font-weight: 500;
+      & svg {
+        width: 16px;
+        height: 12px;
+      }
+
+      &_active {
+        opacity: 0.5;
+        cursor: default;
+        font-weight: 400;
+      }
+
+      &_left {
+        & svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__employee {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    height: 100%;
+    box-sizing: border-box;
+    // transform:rotate3d(0,1,0,180deg);
+
+    &-content {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 23px;
+      height: 100%;
+    }
+  }
+
+  &__left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 279px;
+    max-height: 561px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__right-side {
+    width: 100%;
+    max-width: 336px;
+    max-height: 562px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__logo {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding-bottom: 30px;
+
+    margin-right: -16px;
+
+    & img {
+      max-height: 100%;
+
+      object-fit: contain;
+    }
+  }
+  &__title {
+    white-space: pre-wrap;
+    text-align: left;
+    padding: 0;
+    color: $mainBlackColor;
+    @include MainFont;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 -1px 0 0px;
+    padding: 23px 0 0 24px;
+    border-top: 1px solid $mainBlackColor;
+  }
+  &__position {
+    padding: 0;
+    @include MainFont;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+    color: $accentColor;
+    margin: 12px 0 0 24px;
+  }
+
+  &__contacts {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    margin: 22px 0 0 24px;
+    padding: 0;
+    gap: 12px;
+  }
+
+  &__social {
+    border-top: 1px solid $mainBlackColor;
+    margin-left: -32px;
+    margin-right: -32px;
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    color: $mainBlackColor;
+    justify-content: space-between;
+    padding: 24px 32px 0 32px;
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__company {
+    padding: 32px;
+
+    &-content {
+      height: 531px;
+      margin-top: 52px;
+      padding: 24px;
+      padding-top: 0;
+      margin-left: -32px;
+      margin-right: -32px;
+      display: flex;
+      gap: 0px;
+
+      box-sizing: border-box;
+      border-top: 1px solid $mainBlackColor;
+      & img {
+        max-height: 100px;
+        max-width: 198px;
+        object-fit: contain;
+        margin-top: 24px;
+      }
+    }
+
+    &-name {
+      display: flex;
+      max-width: 268px;
+      width: 100%;
+      margin: 16px 0 0 0;
+      @include SecondaryFont;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 24px;
+      text-align: left;
+      color: $mainBlackColor;
+    }
+
+    &-description {
+      margin: -4px 0 0 0;
+      padding: 0;
+      @include MainFont;
+      font-size: 14px;
+      line-height: 16.8px;
+      text-align: left;
+      color: $mainBlackColor;
+      text-align: left;
+    }
+  }
+}

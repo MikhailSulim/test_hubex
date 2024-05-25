@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface ISocialLink {
   name: string;
   url: string;
@@ -35,7 +37,23 @@ export interface ICompany {
 }
 
 export interface IIconProps {
-  isSocial: boolean;
+  isSocial?: boolean;
   iconName: string;
   className?: string;
+}
+
+export interface IButtonProps {
+  isDark?: boolean;
+  children?: ReactNode;
+  handleClick: () => void;
+}
+
+export interface IInfoItemProps {
+  iconName: string;
+  children: ReactNode;
+  handleClick?: () => void;
+}
+
+export interface ISliderProps {
+  photos: string[];
 }

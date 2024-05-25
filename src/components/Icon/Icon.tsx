@@ -9,9 +9,9 @@ const Icon: React.FC<IIconProps> = ({
 }) => {
   const link = `/images/${
     isSocial ? 'SocialSprite.svg' : 'IconsSprite.svg'
-  }#${iconName}`;
+  }#${iconName.toLowerCase()}`;
   return (
-    <svg className={className}>
+    <svg id={iconName.toLowerCase()} className={className}>
       <use xlinkHref={link} />
     </svg>
   );
