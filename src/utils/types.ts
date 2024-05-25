@@ -57,3 +57,8 @@ export interface IInfoItemProps {
 export interface ISliderProps {
   photos: string[];
 }
+
+export interface IEmployeeCardProps {
+  employee: IEmployee;
+  company: ICompany;
+}
