@@ -21,16 +21,19 @@ const EmployeeCard: React.FC<IEmployeeCardProps> = memo(
         employee.mobilePhoneNumber,
         employee.phoneNumbers,
       ].flat(2)}\nEND:VCARD`;
-
       const blob = new Blob([vCard], { type: 'text/vcard' });
       const url = URL.createObjectURL(blob);
-
       const link = document.createElement('a');
       link.href = url;
       link.download = `${employee.name}.vcf`;
       link.click();
-
       URL.revokeObjectURL(url);
+    };
+
+    const handleCall = () => {
+      window.location.href = `tel:${employee.mobilePhoneNumber
+        .match(/[+]?\d+/gi)
+        ?.join('')}`;
     };
 
     return (
@@ -75,7 +78,7 @@ const EmployeeCard: React.FC<IEmployeeCardProps> = memo(
                       <Icon iconName="save" />
                       {`сохранить\nвизитку`}
                     </Button>
-                    <Button handleClick={handleSaveContact}>
+                    <Button handleClick={handleCall}>
                       <Icon iconName="call" />
                       позвонить
                     </Button>
