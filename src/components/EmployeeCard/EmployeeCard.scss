@@ -77,9 +77,8 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 279px;
+    min-width: 278px;
     max-height: 561px;
-    width: 100%;
     height: 100%;
   }
 
@@ -97,9 +96,8 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    padding-bottom: 30px;
-
-    margin-right: -16px;
+    padding-top: 4px;
+    padding-bottom: 20px;
 
     & img {
       max-height: 100%;
@@ -117,7 +115,7 @@
     font-weight: 700;
     line-height: 24px;
     margin: 0 -1px 0 0px;
-    padding: 23px 0 0 24px;
+    padding: 20px 0 0 24px;
     border-top: 1px solid $mainBlackColor;
   }
   &__position {
@@ -135,7 +133,7 @@
     display: flex;
     height: 100%;
     flex-direction: column;
-    margin: 22px 0 0 24px;
+    margin: 18px 0 0 24px;
     padding: 0;
     gap: 12px;
   }
@@ -156,6 +154,15 @@
       width: 24px;
       height: 24px;
     }
+
+    &-link {
+      color: $mainBlackColor;
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      &:hover {
+        color: $accentColor;
+      }
+    }
   }
   &__company {
     padding: 32px;
@@ -168,8 +175,6 @@
       margin-left: -32px;
       margin-right: -32px;
       display: flex;
-      gap: 0px;
-
       box-sizing: border-box;
       border-top: 1px solid $mainBlackColor;
       & img {
@@ -192,8 +197,10 @@
       text-align: left;
       color: $mainBlackColor;
     }
-
+    
     &-description {
+      max-width: 268px;
+      width: 100%;
       margin: -4px 0 0 0;
       padding: 0;
       @include MainFont;
