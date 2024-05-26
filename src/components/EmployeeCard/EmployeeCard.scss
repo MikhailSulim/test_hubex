@@ -12,11 +12,12 @@
 
     display: flex;
     flex-direction: column;
-    background-color: #f4f4f4;
+    background-color: $bgColor;
     border-radius: 8px;
   }
 
   &__navigation {
+    max-width: 648px;
     position: absolute;
     top: -33px;
     width: 100%;
@@ -40,13 +41,18 @@
       font-size: 14px;
       line-height: 16.8px;
       font-weight: 500;
+      transition: all 0.3s ease-in-out;
       & svg {
         width: 16px;
         height: 12px;
       }
 
+      &:hover {
+        opacity: 0.6;
+      }
+
       &_active {
-        opacity: 0.5;
+        opacity: 0.5 !important;
         cursor: default;
         font-weight: 400;
       }
@@ -82,6 +88,10 @@
     height: 100%;
   }
 
+  &__buttons {
+    display: none;
+  }
+
   &__right-side {
     width: 100%;
     max-width: 336px;
@@ -98,6 +108,9 @@
     height: 100%;
     padding-top: 4px;
     padding-bottom: 20px;
+    &_mobile {
+      display: none;
+    }
 
     & img {
       max-height: 100%;
@@ -143,13 +156,19 @@
     margin-left: -32px;
     margin-right: -32px;
     align-self: flex-end;
-
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    color: $mainBlackColor;
-    justify-content: space-between;
     padding: 24px 32px 0 32px;
+
+    &-container {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      color: $mainBlackColor;
+      justify-content: space-between;
+    }
+
     & svg {
       width: 24px;
       height: 24px;
@@ -159,6 +178,8 @@
       color: $mainBlackColor;
       transition: all 0.3s ease-in-out;
       text-decoration: none;
+      margin: 0;
+      padding: 0;
       &:hover {
         color: $accentColor;
       }
@@ -197,7 +218,7 @@
       text-align: left;
       color: $mainBlackColor;
     }
-    
+
     &-description {
       max-width: 268px;
       width: 100%;
@@ -209,6 +230,341 @@
       text-align: left;
       color: $mainBlackColor;
       text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin-top: 60px;
+    position: relative;
+
+    &__container {
+      max-width: 500px;
+      height: 530px;
+    }
+
+    &__navigation {
+      top: -25px;
+      max-height: 14px;
+      max-width: 500px;
+
+      &-item {
+        gap: 8px;
+        font-size: 12px;
+        line-height: 14px;
+        & svg {
+          width: 12px;
+          height: 10px;
+        }
+      }
+    }
+    &__employee {
+      padding: 22px;
+
+      &-content {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 23px;
+        height: 90%;
+      }
+    }
+
+    &__left-side {
+      min-width: 0;
+      max-width: 211px;
+      max-height: 80%;
+    }
+
+    &__right-side {
+      max-width: 250px;
+      max-height: 80%;
+    }
+
+    &__logo {
+      min-height: 12%;
+      padding-top: 4px;
+      padding-bottom: 10px;
+    }
+    &__title {
+      @include MainFont;
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0 -23px 0 0px;
+      padding: 10px 0 0 20px;
+    }
+    &__position {
+      font-size: 12px;
+      line-height: 14px;
+      margin: 10px 0 0 20px;
+    }
+
+    &__contacts {
+      margin: 14px 0 0 20px;
+      gap: 8px;
+    }
+
+    &__social {
+      border-top: 1px solid $mainBlackColor;
+      margin-left: -24px;
+      margin-right: -24px;
+      align-self: flex-end;
+      padding: 14px 29px 0 29px;
+
+      &-container {
+        gap: 18px;
+      }
+    }
+    &__company {
+      padding: 22px;
+
+      &-content {
+        max-height: 435px;
+        margin-top: 22px;
+        padding: 22px;
+        margin-left: -22px;
+        margin-right: -22px;
+        & img {
+          max-height: 80px;
+          max-width: 168px;
+          margin-top: 22px;
+        }
+      }
+
+      &-name {
+        margin: 12px 0 0 0;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &-description {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .card {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    position: relative;
+    max-width: 100%;
+
+    &__container {
+      max-width: 100%;
+      margin: 0;
+      height: auto;
+      align-items: center;
+      margin-bottom: 30px;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      // background-color: #f4f4f4;
+    }
+
+    &__navigation {
+      display: none;
+    }
+
+    &__buttons {
+      box-sizing: border-box;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 13px;
+      width: 100%;
+      max-width: 100%;
+      margin: -28px 0 12px 0;
+      padding: 0;
+    }
+    &__employee {
+      flex-direction: column;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 0 16px;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      box-sizing: border-box;
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        height: auto;
+      }
+    }
+
+    &__left-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0px;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+
+      &_company {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: $mainWhiteColor;
+        border-radius: 8px 8px 0 0;
+        padding: 20px 20px 13px;
+        border-bottom: 1px solid $mainBlackColor;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+
+        & img {
+          display: none;
+        }
+      }
+    }
+
+    &__right-side {
+      box-sizing: border-box;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      height: fit-content;
+      background-color: $mainWhiteColor;
+      &_employee {
+        border-radius: 8px 8px 0 0;
+      }
+    }
+
+    &__logo {
+      display: none;
+
+      &_mobile {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        max-height: 104px;
+        padding: 0 60px;
+        box-sizing: border-box;
+        & img {
+          max-width: 100%;
+        }
+      }
+    }
+    &__title {
+      box-sizing: border-box;
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0 0 0 0px;
+      padding: 10px 0 0 20px;
+      width: 100%;
+      border: none;
+    }
+    &__position {
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 16.8px;
+      padding-left: 20px;
+      padding-bottom: 16px;
+      margin: 10px 0 0 0;
+      border-bottom: 1px solid $mainBlackColor;
+    }
+
+    &__contacts {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      padding: 16px 20px;
+      gap: 12px;
+    }
+
+    &__social {
+      border: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+
+      &-container {
+        border-top: 1px solid $mainBlackColor;
+        box-sizing: border-box;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 0 8px 8px;
+        background-color: $mainWhiteColor;
+        padding: 24px 20px 40px 20px;
+        gap: 31px;
+
+        & a {
+          align-self: center;
+          justify-self: center;
+        }
+      }
+      & svg {
+        width: 52px;
+        height: 52px;
+      }
+
+      &-link {
+        width: 52px;
+        height: 52px;
+      }
+    }
+    &__company {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 0 16px;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      box-sizing: border-box;
+
+      &-content {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 0;
+        flex-direction: column;
+        gap: 0;
+        border: none;
+
+        & img {
+          max-height: 80px;
+          max-width: 168px;
+          margin-top: 22px;
+        }
+      }
+
+      &-name {
+        max-width: 456px;
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &-description {
+        max-width: 456px;
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
   }
 }

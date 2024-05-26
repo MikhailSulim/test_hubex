@@ -41,7 +41,7 @@ const Slider: React.FC<ISliderProps> = ({ photos }) => {
             className="slider__image"
             key={item}
             src={item}
-            alt=""
+            alt="Фото сотрудника"
           />
         ))}
       </div>

@@ -5,11 +5,25 @@
   @include MainFont;
   font-size: 12px;
   font-weight: 700;
-  line-height: 15.76px;
   border-radius: 8.11px;
+  line-height: 14.4px;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: $mainWhiteColor;
+  color: $mainBlackColor;
+  box-shadow: 0px 4.05px 5.68px 0px #00000008;
+
+
+  & svg {
+    width: 30px;
+    height: 30px;
+  }
 
   &_dark {
+    line-height: 15.76px;
     padding: 18px 0;
     color: $mainWhiteColor;
     background-color: $mainBlackColor;
@@ -17,7 +31,36 @@
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     &:hover {
-        background-color: $accentColor;
+      background-color: $accentColor;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    font-size: 10px;
+    font-weight: 500;
+
+    &_dark {
+      padding: 10px 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .button {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 16px 20px;
+    text-align: left;
+    white-space: pre-wrap;
+
+    & svg {
+      min-width: 30px;
+    }
+
+    &_dark {
+      display: none;
     }
   }
 }

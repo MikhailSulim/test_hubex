@@ -5,10 +5,12 @@ import Button from '../Button/Button';
 import InfoItem from '../InfoItem/InfoItem';
 import Slider from '../Slider/Slider';
 import { IEmployeeCardProps } from '../../utils/types';
+import { useWindowWidth } from '../../hooks/useWindowWidth';
 
 const EmployeeCard: React.FC<IEmployeeCardProps> = memo(
   ({ employee, company }) => {
     const [isEmployeeSide, setIsEmployeeSide] = useState(true);
+    const width = useWindowWidth();
 
     const handleToggleCard = () => {
       setIsEmployeeSide(!isEmployeeSide);
@@ -57,7 +59,10 @@ const EmployeeCard: React.FC<IEmployeeCardProps> = memo(
         </div>
 
         <div className="card__container">
-          {isEmployeeSide && (
+          <div className="card__logo card__logo_mobile">
+            <img src={company.logoImage} alt="логотип" />
+          </div>
+          {(width < 520 || isEmployeeSide) && (
             <div className="card__employee">
               <div className="card__employee-content">
                 <div className="card__left-side">
@@ -65,8 +70,18 @@ const EmployeeCard: React.FC<IEmployeeCardProps> = memo(
                   <Button isDark handleClick={handleSaveContact}>
                     добавить в контакты
                   </Button>
+                  <div className="card__buttons">
+                    <Button handleClick={handleSaveContact}>
+                      <Icon iconName="save" />
+                      {`сохранить\nвизитку`}
+                    </Button>
+                    <Button handleClick={handleSaveContact}>
+                      <Icon iconName="call" />
+                      позвонить
+                    </Button>
+                  </div>
                 </div>
-                <div className="card__right-side">
+                <div className="card__right-side card__right-side_employee">
                   <div className="card__logo">
                     <img src={company.logoImage} alt="логотип" />
                   </div>
@@ -122,19 +137,25 @@ const EmployeeCard: React.FC<IEmployeeCardProps> = memo(
                 </div>
               </div>
               <div className="card__social">
-                {employee.socialLinks.map((link, index) => (
-                  <a className="card__social-link" key={index} href={link.url}>
-                    <Icon isSocial={true} iconName={link.name} />
-                  </a>
-                ))}
+                <div className="card__social-container">
+                  {employee.socialLinks.map((link, index) => (
+                    <a
+                      className="card__social-link"
+                      key={index}
+                      href={link.url}
+                    >
+                      <Icon isSocial={true} iconName={link.name} />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           )}
 
-          {!isEmployeeSide && (
+          {(width < 520 || !isEmployeeSide) && (
             <div className="card__company">
               <div className="card__company-content">
-                <div className="card__left-side">
+                <div className="card__left-side card__left-side_company ">
                   <img src={company.logoImage} alt="логотип" />
 
                   <h2 className="card__company-name">{company.name}</h2>
@@ -191,11 +212,17 @@ const EmployeeCard: React.FC<IEmployeeCardProps> = memo(
                 </div>
               </div>
               <div className="card__social">
-                {company.socialLinks.map((link, index) => (
-                  <a className="card__social-link" key={index} href={link.url}>
-                    <Icon isSocial={true} iconName={link.name} />
-                  </a>
-                ))}
+                <div className="card__social-container">
+                  {company.socialLinks.map((link, index) => (
+                    <a
+                      className="card__social-link"
+                      key={index}
+                      href={link.url}
+                    >
+                      <Icon isSocial={true} iconName={link.name} />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           )}

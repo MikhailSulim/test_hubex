@@ -38,7 +38,6 @@ export interface ICompany {
 
 export interface IIconProps {
   isSocial?: boolean;
-  link?:string;
   iconName: string;
 }
 

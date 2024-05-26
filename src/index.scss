@@ -1,6 +1,7 @@
 @import './styles/global.scss';
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,6 +11,8 @@ body {
   background-color: #292727;
 }
 
-// * {
-//   outline: 1px solid red;
-// }
+@media screen and (max-width: 520px) {
+  body {
+    background-color: #f5f5f7;
+  }
+}

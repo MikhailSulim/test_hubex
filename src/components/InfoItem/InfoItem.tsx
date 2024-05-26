@@ -7,7 +7,7 @@ import React from 'react';
 const InfoItem: React.FC<IInfoItemProps> = ({
   iconName,
   children,
-  
+
   handleClick,
 }) => {
   return (
