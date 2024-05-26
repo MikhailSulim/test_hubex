@@ -1,46 +1,59 @@
-# Getting Started with Create React App
+# Тестовое задание на позицию Стажер React/HTML разработчик в Смарт-Сервис
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Постановка задачи
 
-## Available Scripts
+Необходимо реализовать заданный дизайн на стеке React JS + на выбор LESS либо Styled Components. Решение должно быть размещено в репозитории на github и опубликовано на github pages. Дизайн должен быть адаптивным под размеры экранов. Прочие замечания по реализации отмечены в самом макете: https://www.figma.com/file/xZpkftB2g9NCWcYqLX2Emb/Test-Junior-JS-08.05.2024
 
-In the project directory, you can run:
+## Реализация
 
-### `npm start`
+### Функционал
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+В данном проекте реализовано:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- адаптивная вёрстка;
+- слайдер изображений;
+- сохранение контакта в файл \*.vfc;
+- переход по ссылкам соцсетей;
+- имитация обращения к серверу за данными.
 
-### `npm test`
+### Технологии
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- TypeScript
+- SCSS
+- React Swipeable
+- BEM
+- SVG sprite
+- GitHub Pages
 
-### `npm run build`
+### Установка
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Клонировать репозиторий:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+git clone https://github.com/MikhailSulim/test_hubex.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Перейти в папку с проектом:
 
-### `npm run eject`
+```
+cd test_hubex
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Установить зависимости:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm i
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Запустить проект в режиме разработки:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm run start
+```
 
-## Learn More
+Открыть проект в браузере по адресу:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+http://localhost:3000
+```
