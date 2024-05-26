@@ -4,15 +4,15 @@ import { IIconProps } from '../../utils/types';
 
 const Icon: React.FC<IIconProps> = ({
   isSocial = false,
-  className,
+  link,
   iconName,
 }) => {
-  const link = `/images/${
+  const spriteLink = `/images/${
     isSocial ? 'SocialSprite.svg' : 'IconsSprite.svg'
   }#${iconName.toLowerCase()}`;
   return (
-    <svg id={iconName.toLowerCase()} className={className}>
-      <use xlinkHref={link} />
+    <svg id={iconName.toLowerCase()} >
+      <use xlinkHref={spriteLink} />
     </svg>
   );
 };

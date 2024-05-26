@@ -7,7 +7,6 @@ import React, { useEffect, useRef, useState } from 'react';
 const Slider: React.FC<ISliderProps> = ({ photos }) => {
   const [currentImage, setCurrentImage] = useState<number>(0);
   const sliderRef = useRef<HTMLDivElement | null>(null);
-  // return <img className="slider" src={photos[1]} alt="" />;
   useEffect(() => {
     if (sliderRef.current) {
       sliderRef.current.style.transform = `translateX(${-100 * currentImage}%)`;
