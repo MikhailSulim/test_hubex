@@ -3,7 +3,7 @@ import './Icon.scss';
 import { IIconProps } from '../../utils/types';
 
 const Icon: React.FC<IIconProps> = ({ isSocial = false, iconName }) => {
-  const spriteLink = `/images/${
+  const spriteLink = `images/${
     isSocial ? 'SocialSprite.svg' : 'IconsSprite.svg'
   }#${iconName.toLowerCase()}`;
   return (
