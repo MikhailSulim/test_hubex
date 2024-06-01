@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test_hubex/static/css/main.716c6f4b.css",
-    "main.js": "/test_hubex/static/js/main.8a8d556b.js",
+    "main.css": "/test_hubex/static/css/main.ec6e810e.css",
+    "main.js": "/test_hubex/static/js/main.3e27d3f7.js",
     "static/js/453.059f6bce.chunk.js": "/test_hubex/static/js/453.059f6bce.chunk.js",
     "static/media/AbhayaLibre-ExtraBold.ttf": "/test_hubex/static/media/AbhayaLibre-ExtraBold.af1e553555091ae7d478.ttf",
     "static/media/photo_02.png": "/test_hubex/static/media/photo_02.6f5608d205d4f04c0f55.png",
@@ -21,12 +21,12 @@
     "static/media/TTFirsNeue-Bold.woff2": "/test_hubex/static/media/TTFirsNeue-Bold.b6b7358cb98d63027a2a.woff2",
     "static/media/TTFirsNeue-Regular.woff2": "/test_hubex/static/media/TTFirsNeue-Regular.aa35bc5e7e663660cc20.woff2",
     "index.html": "/test_hubex/index.html",
-    "main.716c6f4b.css.map": "/test_hubex/static/css/main.716c6f4b.css.map",
-    "main.8a8d556b.js.map": "/test_hubex/static/js/main.8a8d556b.js.map",
+    "main.ec6e810e.css.map": "/test_hubex/static/css/main.ec6e810e.css.map",
+    "main.3e27d3f7.js.map": "/test_hubex/static/js/main.3e27d3f7.js.map",
     "453.059f6bce.chunk.js.map": "/test_hubex/static/js/453.059f6bce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.716c6f4b.css",
-    "static/js/main.8a8d556b.js"
+    "static/css/main.ec6e810e.css",
+    "static/js/main.3e27d3f7.js"
   ]
 }
