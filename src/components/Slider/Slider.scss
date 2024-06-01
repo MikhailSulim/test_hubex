@@ -36,6 +36,14 @@
     object-fit: cover;
     object-position: top;
     display: block;
+
+    &:hover {
+      cursor: grab;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
   }
 
   &__pagination {

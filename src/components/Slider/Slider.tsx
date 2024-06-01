@@ -7,6 +7,8 @@ import React, { useEffect, useRef, useState } from 'react';
 const Slider: React.FC<ISliderProps> = ({ photos }) => {
   const [currentImage, setCurrentImage] = useState<number>(0);
   const sliderRef = useRef<HTMLDivElement | null>(null);
+  const [isSwiping, setIsSwiping] = useState(false);
+
   useEffect(() => {
     if (sliderRef.current) {
       sliderRef.current.style.transform = `translateX(${-100 * currentImage}%)`;
@@ -27,9 +29,11 @@ const Slider: React.FC<ISliderProps> = ({ photos }) => {
   const handlerSwipe = useSwipeable({
     onSwipedLeft: () => handleNext(),
     onSwipedRight: () => handlePrev(),
-    swipeDuration: 500,
+    swipeDuration: 600,
     preventScrollOnSwipe: true,
     trackMouse: true,
+    trackTouch: true,
+    delta:1,
   });
 
   return (
